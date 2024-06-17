@@ -1,4 +1,4 @@
-const Producto = require('../models/Producto');
+const Producto = require('../models/producto');
 const productos = require('../data/productos.json'); // json previo a la conexion con la base de datos
 
 class ProductoController {
