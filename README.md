@@ -13,4 +13,21 @@ agrego dentro de package.json, en Scripts:
 3 formas ->
 1) node index.js
 2) npm run dev  -> usar este
-3)
+
+## deploy en vercel 
+para realizar el deploy necesitamos crear un archivo vercel.json:
+{
+    "version":2,
+    "builds": [
+        {
+            "src": "./index.js",
+            "use": "@vercer/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest":"/"
+        }
+    ]
+}
