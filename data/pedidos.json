@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "nombreCliente": "Cosme Fulanito",
+        "emailCliente": "cliente1@example.com",
+        "precioTotal": 15000.00,
+        "entregado": 0
+    }
+]
