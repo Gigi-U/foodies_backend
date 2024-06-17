@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/',()=>{
+app.get('/',(req, res)=>{
     res.send('Foodies Deploy')
 })
 // no siempre sabemos si el servidor va a tener el puerto 3000 disponible para eso tengo que preguntarle. (o el puerto del swervidor o sino dejar 3000)
