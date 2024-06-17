@@ -15,7 +15,7 @@ agrego dentro de package.json, en Scripts:
 2) npm run dev  -> usar este
 
 ## deploy en vercel 
-una vez que deployamos necesitamos agregar un archivo vercel.json:
+para realizar el deploy necesitamos crear un archivo vercel.json:
 {
     "version":2,
     "builds": [
