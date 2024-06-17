@@ -1,0 +1,18 @@
+[
+    {
+        "producto_id": 1,
+        "imagen_id": 1
+    },
+    {
+        "producto_id": 2,
+        "imagen_id": 2
+    },
+    {
+        "producto_id": 3,
+        "imagen_id": 3
+    },
+    {
+        "producto_id": 4,
+        "imagen_id": 4
+    }
+]

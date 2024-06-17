@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "seccion": "producto",
+        "url": "https://images.pexels.com/photos/11568799/pexels-photo-11568799.jpeg"
+    },
+    {
+        "id": 2,
+        "seccion": "producto",
+        "url": "https://images.pexels.com/photos/2338015/pexels-photo-2338015.jpeg"
+    },
+    {
+        "id": 3,
+        "seccion": "producto",
+        "url": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+    },
+    {
+        "id": 4,
+        "seccion": "producto",
+        "url": "https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg"
+    },
+    {
+        "id": 5,
+        "seccion": "combo",
+        "url": "https://images.pexels.com/photos/4021939/pexels-photo-4021939.jpeg"
+    },
+    {
+        "id": 6,
+        "seccion": "combo",
+        "url": "https://images.pexels.com/photos/2092897/pexels-photo-2092897.jpeg"
+    }
+]

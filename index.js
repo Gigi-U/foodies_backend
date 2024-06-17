@@ -1,11 +1,11 @@
+// index.js
 const express = require('express');
 const app = express();
+const productosRoutes = require('./routes/productos.router');
 
-app.get('/',(req, res)=>{
-    res.send('Foodies Deploy')
-})
-// no siempre sabemos si el servidor va a tener el puerto 3000 disponible para eso tengo que preguntarle. (o el puerto del swervidor o sino dejar 3000)
-//const PORT = 3000;
+app.use(express.json());
+
+app.use("/productos", productosRoutes);
+
 const PORT = process.env.PORT || 3000;
-
-app.listen(PORT,()=> console.log(`http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
