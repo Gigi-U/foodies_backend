@@ -16,18 +16,3 @@ agrego dentro de package.json, en Scripts:
 
 ## deploy en vercel 
 para realizar el deploy necesitamos crear un archivo vercel.json:
-{
-    "version":2,
-    "builds": [
-        {
-            "src": "./index.js",
-            "use": "@vercer/node"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest":"/"
-        }
-    ]
-}
