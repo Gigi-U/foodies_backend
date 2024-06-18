@@ -1,12 +1,24 @@
 const mysql = require('mysql2');
 
-const db = mysql.createConnection({
-    host: 'mysql-giselaurriza.alwaysdata.net', // host de AlwaysData
-    port: 3306, 
-    user: '362671_admin', //  usuario de AlwaysData
-    password: 'RuloLoco1980.', //  contraseña de AlwaysData
-    database: 'giselaurriza_foodies' // El nombre de base de datos en AlwaysData
-});
+if (process.env.NODE_ENV === 'production') {
+    // Configuración para producción (Vercel u otro servicio)
+    db = mysql.createConnection({
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE
+    });
+} else {
+    // Configuración para desarrollo local o Preview
+    db = mysql.createConnection({
+        host: 'mysql-giselaurriza.alwaysdata.net',
+        port: 3306,
+        user: '362671_admin',
+        password: 'RuloLoco1980.',
+        database: 'giselaurriza_foodies'
+    });
+}
+
 db.connect((err)=>{
     if(err){
         console.error('Error conectando a la base de datos: ', err);
