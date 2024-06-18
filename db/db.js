@@ -1,14 +1,8 @@
 const mysql = require('mysql2');
 
-if (process.env.NODE_ENV === 'production') {
-    // Configuración para producción (Vercel u otro servicio)
-    db = mysql.createConnection({
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        database: process.env.DB_DATABASE
-    });
-} else {
+let db;
+
+
     // Configuración para desarrollo local o Preview
     db = mysql.createConnection({
         host: 'mysql-giselaurriza.alwaysdata.net',
@@ -17,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
         password: 'RuloLoco1980.',
         database: 'giselaurriza_foodies'
     });
-}
+
 
 db.connect((err)=>{
     if(err){
