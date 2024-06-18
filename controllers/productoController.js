@@ -1,6 +1,18 @@
 const db = require('../db/db');
 
 class ProductoController {
+    // prueba ping-pong
+    consultarTodos(req, res) {
+        const sql = 'SELECT * FROM producto';
+        db.query(sql, (err, productos) => {
+            if (err) {
+                console.error('Error ejecutando la consulta', err);
+                res.status(500).json({ error: 'Error ejecutando la consulta' });
+                return;
+            }
+            res.json(productos);
+        });
+    }
     // Obtengo todos los productos
     consultarTodos(req, res) {
         const sql = 'SELECT * FROM producto';
