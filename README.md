@@ -64,3 +64,10 @@ agrego dentro de package.json, en Scripts:
 
 ## deploy en vercel 
 para realizar el deploy necesitamos crear un archivo vercel.json
+
+
+## conexion con database
+
+```shell
+npm install mysql2
+```
