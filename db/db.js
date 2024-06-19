@@ -1,17 +1,12 @@
 const mysql = require('mysql2');
 
-let db;
-
-
-    // Configuración para desarrollo local o Preview
-    db = mysql.createConnection({
-        host: 'mysql-giselaurriza.alwaysdata.net',
-        port: 3306,
-        user: '362671_admin',
-        password: 'RuloLoco1980.',
-        database: 'giselaurriza_foodies'
-    });
-
+const db = mysql.createConnection({
+    host: 'mysql-giselaurriza.alwaysdata.net',
+    port: 3306,
+    user: '362671_admin',
+    password: 'RuloLoco1980.',
+    database: 'giselaurriza_foodies'
+});
 
 db.connect((err)=>{
     if(err){
@@ -20,7 +15,7 @@ db.connect((err)=>{
     }
     console.log(' Conectado a la base de datos.')
 
-    db.query('CREATE DATABASE IF NOT EXISTS giselaurriza_foodies',(err, results)=>{
+/*     db.query('CREATE DATABASE IF NOT EXISTS giselaurriza_foodies',(err, results)=>{
         if(err){
             console.error('Error creando la base de datos',err);
             return;
@@ -132,6 +127,6 @@ db.connect((err)=>{
                 console.log('Tabla pedido_tiene_producto creada');
             }); 
         });
-    }); 
+    });  */
 });
 module.exports = db;
