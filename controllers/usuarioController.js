@@ -46,7 +46,7 @@ class UsuarioController {
     modificarUsuario(req, res) {
         const { id } = req.params;
         const { nombre, password, estado } = req.body;
-        const sql = 'UPDATE usuario SET nombre = ?, password = ?, estado = ?';
+        const sql = 'UPDATE usuario SET nombre = ?, password = ?, estado = ? WHERE id = ?';
         db.query(sql, [nombre, password, estado, id], (err, usuario) => {
             if (err) {
                 console.error('Error ejecutando la consulta', err);
