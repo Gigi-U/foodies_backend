@@ -5,6 +5,7 @@ const UsuarioController = require('../controllers/usuarioController');
 router.get("/", UsuarioController.consultarTodos);
 router.get("/:id", UsuarioController.consultarPorId);
 router.post("/", UsuarioController.altaUsuario);
+router.post("/validarInicioSesion", UsuarioController.validarInicioSesion);
 router.put("/:id", UsuarioController.modificarUsuario);
 router.delete("/:id", UsuarioController.eliminarUsuario);
 
