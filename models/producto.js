@@ -6,6 +6,7 @@ class Producto {
         this.descripcion = descripcion;
         this.precio = precio;
         this.stock = stock;
+        this.imagenes = []; 
     }
 }
 module.exports = Producto;
