@@ -28,6 +28,7 @@ db.connect((err) => {
                 return;
             }
 
+/*
             // CREACIÓN TABLA PRODUCTO
             const createProductTableQuery = `
                 CREATE TABLE IF NOT EXISTS producto(
@@ -98,7 +99,7 @@ db.connect((err) => {
                 console.log('Tabla Imagen creada');
             });
 
-/*             // CREACIÓN TABLA COMBO - si lo llegamos a usar
+             // CREACIÓN TABLA COMBO - si lo llegamos a usar
             const createComboTableQuery = `
                 CREATE TABLE IF NOT EXISTS combo(
                     id INT AUTO_INCREMENT PRIMARY KEY,
