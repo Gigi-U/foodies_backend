@@ -49,6 +49,49 @@
 					"response": []
 				},
 				{
+					"name": "GET_imagenPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/productos/1/imagenes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"1",
+								"imagenes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_imagenes_de_producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/productos/1/imagenes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"1",
+								"imagenes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "POST_producto 5",
 					"request": {
 						"method": "POST",
@@ -126,6 +169,37 @@
 					"response": []
 				},
 				{
+					"name": "PUT_imagenProducto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen_id\": 7,\r\n    \"seccion\": \"producto\",\r\n    \"url\": \"https://www.istockphoto.com/es/foto/hamburguesa-con-queso-de-tocino-en-un-bollo-tostado-gm1398630614-452706020\",\r\n    \"producto_id\": 1,\r\n    \"combo_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/productos/1/imagenes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"1",
+								"imagenes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "GET_producto 5 modificado",
 					"request": {
 						"method": "GET",
@@ -180,6 +254,187 @@
 							"path": [
 								"productos",
 								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IMAGENES",
+			"item": [
+				{
+					"name": "GET_imagenes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/imagenes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_imagen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/imagenes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_imagen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seccion\": \"producto\",\r\n    \"url\": \"https://media.istockphoto.com/id/1346064470/es/foto/disfrutando-de-mi-hamburguesa-con-queso-favorita-en-este-momento.jpg\",\r\n    \"producto_id\": 1,\r\n    \"combo_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/imagenes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_imagen 8",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/imagenes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT_imagen 8",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen_id\": 8,\r\n    \"seccion\": \"producto\",\r\n    \"url\": \"https://media.istockphoto.com/id/1371431471/es/foto/hamburguesa-con-queso-de-ternera-en-plato-negro-con-llamas-de-fondo.jpg\",\r\n    \"producto_id\": 1,\r\n    \"combo_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/imagenes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_imagen modificada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/imagenes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_imagen",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/imagenes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_imagen eliminada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/imagenes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"imagenes",
+								"8"
 							]
 						}
 					},
