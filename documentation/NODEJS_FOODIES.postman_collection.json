@@ -262,6 +262,187 @@
 			]
 		},
 		{
+			"name": "PEDIDOS",
+			"item": [
+				{
+					"name": "GET_pedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_pedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreCliente\": \"Cosme Fulanito\",\r\n    \"emailCliente\": \"cosme@example.com\",\r\n    \"precioTotal\": 18000.0,\r\n    \"entregado\": false,\r\n    \"productos\": [\r\n        {\r\n            \"id\": 1,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_pedido 3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT_pedido 3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"nombreCliente\": \"Juan Lopez\",\r\n    \"emailCliente\": \"juan@example.com\",\r\n    \"precioTotal\": \"18000.00\",\r\n    \"entregado\": 0,\r\n    \"productos\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"\",\r\n            \"descripcion\": \"Burguer gourmet\",\r\n            \"precio\": \"10000.00\",\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Taco\",\r\n            \"descripcion\": \"Taco de carne con jalapeño\",\r\n            \"precio\": \"8000.00\",\r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pedidos/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ppedido 3 modificado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_pedido 3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_pedido 3 eliminado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "IMAGENES",
 			"item": [
 				{
