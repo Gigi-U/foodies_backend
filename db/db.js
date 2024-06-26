@@ -68,9 +68,9 @@ db.connect((err) => {
             const createTicketTableQuery = `
                 CREATE TABLE IF NOT EXISTS pedido(
                     id INT AUTO_INCREMENT PRIMARY KEY,
-                    nombreCliente VARCHAR(255) NOT NULL,
-                    emailCliente VARCHAR(255) NOT NULL,
-                    precioTotal DECIMAL(10, 2) NOT NULL,
+                    nombre_cliente VARCHAR(255) NOT NULL,
+                    email_cliente VARCHAR(255) NOT NULL,
+                    precio_total DECIMAL(10, 2) NOT NULL,
                     entregado TINYINT NOT NULL,
                     productos JSON NOT NULL
                 );
