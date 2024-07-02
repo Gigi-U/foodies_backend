@@ -4,7 +4,7 @@ class ProductoController {
     // Obtengo todos los productos con sus imágenes
     consultarTodos(req, res) {
         const sql = `
-            SELECT p.id AS producto_id, p.nombre AS producto_nombre, p.descripcion AS producto_descripcion,
+            SELECT p.id, p.nombre AS producto_nombre, p.descripcion AS producto_descripcion,
                    p.precio AS producto_precio, p.stock AS producto_stock,
                    i.imagen_id, i.url AS imagen_url, i.seccion, i.producto_id, i.combo_id
             FROM producto p
@@ -158,7 +158,7 @@ function agruparProductosConImagenes(results) {
         if (row.producto_id !== productoActual?.id) {
             // Nuevo producto encontrado
             productoActual = {
-                id: row.producto_id,
+                id: row.id,
                 nombre: row.producto_nombre,
                 descripcion: row.producto_descripcion,
                 precio: row.producto_precio,
