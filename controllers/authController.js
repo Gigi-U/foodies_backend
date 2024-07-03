@@ -5,6 +5,22 @@ const db = require('../db/db');
 const usuario = require("../models/usuario");
 
 class AuthController {
+    // Obtengo todos los auth
+    consultarTodos(req, res) {
+      const sql = 'SELECT * FROM auth';
+      db.query(sql, (err, auth) => {
+          if (err) {
+              console.error('Error ejecutando la consulta', err);
+              res.status(500).json({ error: 'Error ejecutando la consulta' });
+              return;
+          }
+          res.json(auth);
+      });
+  }
+
+
+
+
   altaUsuario = (req, res) => {
     const { nombre, password,estado } = req.body;
 
@@ -24,7 +40,7 @@ class AuthController {
   const userId = Date.now();
 
   // Generar el token JWT
-  const token = jwt.sign({ id: userId }, process.env.SECRET_KEY, { expiresIn: "15m" });
+  const token = jwt.sign({ id: userId }, process.env.SECRET_KEY, { expiresIn: "1h" });
 
   // Devolver la respuesta con el token generado
   res.status(201).send({ auth: true, token });
@@ -34,7 +50,6 @@ class AuthController {
 
 login = (req, res) => {
   const { nombre, password } = req.body;
-
   // Buscar el usuario en la base de datos por nombre
   db.query('SELECT * FROM auth WHERE nombre = ?', nombre, (err, results) => {
     if (err) {
@@ -56,7 +71,7 @@ login = (req, res) => {
     }
 
     // Generar el token JWT
-    const token = jwt.sign({ id: usuario.id }, process.env.SECRET_KEY, { expiresIn: "5m" });
+    const token = jwt.sign({ id: usuario.id }, process.env.SECRET_KEY, { expiresIn: "1h" });
 
     res.status(200).send({ auth: true, token });
   });
