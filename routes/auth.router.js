@@ -4,7 +4,7 @@ const authController = require('../controllers/authController');
 
 const authMiddleware = require('../middlewares/authMiddleware');
 
-router.post("/", authController.consultarTodos);
+router.get("/", authController.consultarTodos);
 router.post("/altaUsuario", authController.altaUsuario);
 router.post("/login", authController.login);
 
